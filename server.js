@@ -47,7 +47,6 @@ const database = {
 }
 
 app.get('/', (req, res) => {
-    // res.send('This is working');
     res.send(database.users);
 })
 
@@ -94,9 +93,6 @@ app.get('/profile/:id', (req, res) => {
         }
     }).catch(err => res.status(400).json('error getting user'));
 
-    // if (!found) {
-    //     res.status(400).json('not found');
-    // }
 })
 
 app.put('/image', (req, res) => {
